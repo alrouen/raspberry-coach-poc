@@ -10,7 +10,21 @@ My kit
 
 ![alt text](img/raspberry-alexa.jpg "My kit")
 
-## alexa voice service API access
+## What we will do ?
+
+We will reach AWS Alexa voice service from a raspberry pi.
+To do so we will:
+
+- Create a Alexa product to get all we need to reach Alexa AVS API
+- Setup a raspberry with Raspian Stretch lite
+- Install the reSpeaker driver and test GPIO for LEDs and action button
+- Setup a python environment with all libs we will need
+- Install Snowboy for hotword detection (to wake-up your assistant),
+- Install a python AVS client
+- Install python libraries to link together hotword detection and AVS
+- Play with it!
+
+## 0) alexa voice service API access
 
 By following this tutorial https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script:
 
@@ -24,12 +38,15 @@ You should be able to collect these information:
 
 ## 1) Raspian Stretch installation
 
+After having flashed Raspian Stretch lite on a microSD card, from my Mac I go :
 
     cd /Volumes/boot
 
 	touch ssh
 
 	vi wpa_supplicant.conf
+
+Add this:
 
 	ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
     network={
@@ -39,7 +56,7 @@ You should be able to collect these information:
     }
 
 
-## 2) System setup
+## 2) System setup and reSparker driver
     sudo apt-get update -y
     sudo apt-get upgrade -y
     sudo apt-get install -y git vim
@@ -172,7 +189,7 @@ Run "alexa-audio-check" to check avs access to audio interface
 - Say "what time is it"
 - Then you should listen Alexa giving you the current time
 
-### 9) Hand-free demo
+## 9) Hand-free demo
 
 !!! Make sure to use the previously created python virtual env
 
@@ -197,7 +214,7 @@ Then Alexa is waiting for the hotword to listen to you...
 The same demo, with noise suppression is available with alexa-demo-with-noisesuppression.py
 
 
-### 10) All-in-one
+## 10) All-in-one
 
 !!! Make sure to use the previously created python virtual env
 
