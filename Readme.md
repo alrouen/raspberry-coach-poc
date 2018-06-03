@@ -176,7 +176,7 @@ Use alexa-auth to authenticate your device against AVS. The .avs.json should the
 
 If you have any issue the authentication process, please make sure you have added url in the "Allowed Return URLs" of the "Web settings" in the configuration of the AWS AVS security profile.
 
-At the moment, Python avs does not support HTTPS for this process, but AWS require it. So just add a HTTPS url, with the ip address of your raspberry as return url. When the redirect fail in the browser (https !) just edit the url to replace https with http. And the job is done.
+At the moment, Python avs does not support HTTPS for this process, but AWS require it. So just add a HTTPS url, with the ip address of your raspberry as return url in the security profile configuration. When the redirect fail in the browser (https !) just edit the url to replace https with http. And the job is done.
 
 ### 8.2) Alexa audio check
 
