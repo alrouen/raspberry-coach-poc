@@ -85,7 +85,7 @@ To save volume settings :
 
     sudo apt-get install -y mpg123 mpv
     sudo apt-get install -y gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gir1.2-gstreamer-1.0 python-gi python-gst-1.0 libatlas-base-dev libpcre3 libpcre3-dev
-    sudo apt-get install -y python-pyaudio python3-pyaudio sox python-dev python3-dev python-virtualenv python3-venv portaudio19-dev
+    sudo apt-get install -y python-pyaudio  sox python-dev python-virtualenv portaudio19-dev
 	  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 	  sudo apt-get install -y nodejs
 
