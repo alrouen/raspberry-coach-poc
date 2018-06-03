@@ -6,9 +6,13 @@
 
 A good bundle that contains everything your need : https://makers.snips.ai/kit/
 
+My kit
+
+![alt text](img/raspberry-alexa.jpg "My kit")
+
 ## alexa voice service API access
 
-By following this tutorial https://developer.amazon.com/lwa/sp/select-security-profile.html:
+By following this tutorial https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script:
 
 You should be able to collect these information:
 
@@ -125,6 +129,8 @@ To test snowboy with a model (i.e. alexa.pmdl), from snowboy folder :
 
 Then you can say the hotword from your model, snowboy should print out the detection/play a notification sound
 
+To create your own hotword, just go here: https://snowboy.kitt.ai/
+
 ## 7) Noise suppression librarie (webrtc-audio-processing)
 
 !!! Make sure to use the previously created python virtual env
@@ -150,6 +156,10 @@ Then install avs:
 ### 8.1) Alexa authentification
 
 Use alexa-auth to authenticate your device against AVS. The .avs.json should then contains more values retrieved from the OAuth2 authentication process
+
+If you have any issue the authentication process, please make sure you have added url in the "Allowed Return URLs" of the "Web settings" in the configuration of the AWS AVS security profile.
+
+At the moment, Python avs does not support HTTPS for this process, but AWS require it. So just add a HTTPS url, with the ip address of your raspberry as return url. When the redirect fail in the browser (https !) just edit the url to replace https with http. And the job is done.
 
 ### 8.2) Alexa audio check
 
@@ -188,6 +198,8 @@ The same demo, with noise suppression is available with alexa-demo-with-noisesup
 
 
 ### 10) All-in-one
+
+!!! Make sure to use the previously created python virtual env
 
 in repository coach folder, you will find an all-one example allowing you to :
 
