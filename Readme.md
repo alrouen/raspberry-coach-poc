@@ -161,7 +161,7 @@ Run "alexa-audio-check" to check avs access to audio interface
 - Say "what time is it"
 - Then you should listen Alexa giving you the current time
 
-### 9) all-in-one demo
+### 9) Hand-free demo
 
 !!! Make sure to use the previously created python virtual env
 
@@ -184,3 +184,12 @@ Copy the alexa-demo.py file in the "coach" folder and run it. You can adjust the
 Then Alexa is waiting for the hotword to listen to you...
 
 The same demo, with noise suppression is available with alexa-demo-with-noisesuppression.py
+
+
+### 10) All-in-one
+
+in repository coach folder, you will find an all-one example allowing you to :
+
+- have a hand-free alexa service
+- with status notification with LEDs feedback
+- to trigger alexa while just pushing the HAT button

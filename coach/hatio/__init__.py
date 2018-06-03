@@ -138,3 +138,12 @@ class Button:
     @property
     def state(self):
         return GPIO.input(BUTTON)
+
+    @staticmethod
+    def set_callback_on_rising(button_callback):
+        GPIO.add_event_detect(BUTTON, GPIO.RISING, callback=button_callback)
+
+    @staticmethod
+    def clean_up():
+        GPIO.cleanup()
+
