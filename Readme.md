@@ -55,9 +55,10 @@ To set volume:
     alsamixer
 
 
-To save volume settings (in /var/lib/alsa/asound.state) :
+To save volume settings :
 
     sudo alsactl store
+    sudo alsactl --file=/etc/voicecard/wm8960_asound.state store
 
 ## 3) Python Dependencies
 
