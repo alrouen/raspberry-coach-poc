@@ -26,7 +26,7 @@ To do so we will:
 
 ## 0) alexa voice service API access
 
-By following this tutorial https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script:
+By following this tutorial https://github.com/alexa/avs-device-sdk/wiki/Create-Security-Profile:
 
 You should be able to collect these information:
 
