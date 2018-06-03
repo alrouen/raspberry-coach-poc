@@ -124,7 +124,19 @@ To test snowboy with a model (i.e. alexa.pmdl), from snowboy folder :
 
 Then you can say the hotword from your model, snowboy should print out the detection/play a notification sound
 
-## 7) AVS python client
+## 7) Noise suppression librarie (webrtc-audio-processing)
+
+!!! Make sure to use the previously created python virtual env
+
+In coach folder :
+
+    git clone https://github.com/xiongyihui/python-webrtc-audio-processing.git
+    cd python-webrtc-audio-processing/
+    git submodule init && git submodule update
+    python setup.py build
+    python setup.py install
+
+## 8) AVS python client
 
 !!! Make sure to use the previously created python virtual env
 
@@ -134,22 +146,22 @@ Then install avs:
 
     pip install avs
 
-### 7.1) Alexa authentification
+### 8.1) Alexa authentification
 
 Use alexa-auth to authenticate your device against AVS. The .avs.json should then contains more values retrieved from the OAuth2 authentication process
 
-### 7.2) Alexa audio check
+### 8.2) Alexa audio check
 
 Run "alexa-audio-check" to check avs access to audio interface
 
-### 7.3) Run Alexa Voice service from command line
+### 8.3) Run Alexa Voice service from command line
 
 - Run "alexa-tap"
 - When you see "INFO:avs.alexa:on_ready" on the console press enter
 - Say "what time is it"
 - Then you should listen Alexa giving you the current time
 
-### 8) all-in-one demo
+### 9) all-in-one demo
 
 !!! Make sure to use the previously created python virtual env
 
@@ -170,3 +182,5 @@ Then add manually the compiled snowboy as a local dependencies for voice-engine:
 Copy the alexa-demo.py file in the "coach" folder and run it. You can adjust the path and name of the snowboy model file.
 
 Then Alexa is waiting for the hotword to listen to you...
+
+The same demo, with noise suppression is available with alexa-demo-with-noisesuppression.py
