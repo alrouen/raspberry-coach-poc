@@ -148,7 +148,7 @@ Then you can say the hotword from your model, snowboy should print out the detec
 
 To create your own hotword, just go here: https://snowboy.kitt.ai/
 
-## 7) Noise suppression librarie (webrtc-audio-processing)
+## 7) Noise suppression library (webrtc-audio-processing)
 
 !!! Make sure to use the previously created python virtual env
 
