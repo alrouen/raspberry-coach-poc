@@ -171,11 +171,15 @@ Then install avs:
 
 ### 8.1) Alexa authentification
 
+As required by AWS, but not supported by Python AVS, to force HTTPS redirect URL with AVS, edit in your site-package/avs/auth.py, to change line 31 (https://github.com/respeaker/avs/blob/master/avs/auth.py#L31) :
+
+    redirect_uri = "https://" + self.request.host + "/authresponse"
+
 Use alexa-auth to authenticate your device against AVS. The .avs.json should then contains more values retrieved from the OAuth2 authentication process
 
 If you have any issue the authentication process, please make sure you have added url in the "Allowed Return URLs" of the "Web settings" in the configuration of the AWS AVS security profile.
 
-At the moment, Python avs does not support HTTPS for this process, but AWS require it. So just add a HTTPS url, with the ip address of your raspberry as return url in the security profile configuration. When the redirect fail in the browser (https !) just edit the url to replace https with http. And the job is done.
+At callback time, you will get a connection error from your raspberry, so just change the browser url with HTTP, with the ip address of your raspberry as return url in the security profile configuration. When the redirect fail in the browser (https !) just edit the url to replace https with http. And the job is done.
 
 ### 8.2) Alexa audio check
 
